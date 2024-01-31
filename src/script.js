@@ -111,7 +111,7 @@ scene.add(fillLight)
 
 /////////////////////////////////////////////////////////////////////////
 ///// LOADING GLB/GLTF MODEL FROM BLENDER
-loader.load('models/gltf/graces-draco2.glb', function (gltf) {
+loader.load('models/gltf/agent.glb', function (gltf) {
 
     gltf.scene.traverse((obj) => {
         if (obj.isMesh) {
