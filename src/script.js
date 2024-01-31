@@ -105,7 +105,7 @@ const sunLight = new DirectionalLight(0x435c72, 0.08)
 sunLight.position.set(-100,0,-100)
 scene.add(sunLight)
 
-const fillLight = new PointLight(0x88b2d9, 2.7, 4, 3)
+const fillLight = new PointLight(0x88b2d9, 5, 4, 3)
 fillLight.position.set(30,3,1.8)
 scene.add(fillLight)
 
