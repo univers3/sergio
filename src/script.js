@@ -115,10 +115,10 @@ loader.load('models/gltf/agent.glb', function (gltf) {
 
     gltf.scene.traverse((obj) => {
         if (obj.isMesh) {
-            oldMaterial = obj.material
-            obj.material = new MeshPhongMaterial({
-                shininess: 45
-            })
+            //oldMaterial = obj.material
+            //obj.material = new MeshPhongMaterial({
+            //    shininess: 45
+            //})
         }
     })
     scene.add(gltf.scene)
