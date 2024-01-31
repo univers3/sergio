@@ -18,7 +18,7 @@ loadingManager.onLoad = function() {
     document.querySelector("body").style.overflow = 'auto'
 
     const yPosition = {y: 0}
-    
+
     new TWEEN.Tween(yPosition).to({y: 100}, 900).easing(TWEEN.Easing.Quadratic.InOut).start()
     .onUpdate(function(){ looadingCover.style.setProperty('transform', `translate( 0, ${yPosition.y}%)`)})
     .onComplete(function () {looadingCover.parentNode.removeChild(document.getElementById("loading-text-intro")); TWEEN.remove(this)})
@@ -33,7 +33,7 @@ loadingManager.onLoad = function() {
 /////////////////////////////////////////////////////////////////////////
 //// DRACO LOADER TO LOAD DRACO COMPRESSED MODELS FROM BLENDER
 const dracoLoader = new DRACOLoader()
-dracoLoader.setDecoderPath('/draco/')
+dracoLoader.setDecoderPath('/sergio/draco/')
 dracoLoader.setDecoderConfig({ type: 'js' })
 const loader = new GLTFLoader(loadingManager)
 loader.setDRACOLoader(dracoLoader)
@@ -88,7 +88,7 @@ scene.add(camera2)
 window.addEventListener('resize', () => {
     camera.aspect = container.clientWidth / container.clientHeight
     camera.updateProjectionMatrix()
-    
+
     camera2.aspect = containerDetails.clientWidth / containerDetails.clientHeight
     camera2.updateProjectionMatrix()
 
@@ -117,7 +117,7 @@ loader.load('models/gltf/graces-draco2.glb', function (gltf) {
         if (obj.isMesh) {
             oldMaterial = obj.material
             obj.material = new MeshPhongMaterial({
-                shininess: 45 
+                shininess: 45
             })
         }
     })
@@ -139,7 +139,7 @@ function introAnimation() {
         document.querySelector('.header').classList.add('ended')
         document.querySelector('.first>p').classList.add('ended')
     })
-    
+
 }
 
 //////////////////////////////////////////////////
@@ -254,7 +254,7 @@ const customCursor = document.querySelector('.cursor')
 
 function update(e) {
     const span = this.querySelector('span')
-    
+
     if(e.type === 'mouseleave') {
         span.style.cssText = ''
     } else {
