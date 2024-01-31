@@ -111,7 +111,7 @@ scene.add(fillLight)
 
 /////////////////////////////////////////////////////////////////////////
 ///// LOADING GLB/GLTF MODEL FROM BLENDER
-loader.load('models/gltf/harem.glb', function (gltf) {
+loader.load('models/gltf/sword.glb', function (gltf) {
 
     gltf.scene.traverse((obj) => {
         if (obj.isMesh) {
