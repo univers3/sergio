@@ -75,7 +75,7 @@ const cameraGroup = new Group()
 scene.add(cameraGroup)
 
 const camera = new PerspectiveCamera(35, width / height, 1, 100)
-camera.position.set(19,1.54,-0.1)
+camera.position.set(0,0,0)
 cameraGroup.add(camera)
 
 const camera2 = new PerspectiveCamera(35, containerDetails.clientWidth / containerDetails.clientHeight, 1, 100)
