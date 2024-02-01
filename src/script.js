@@ -135,7 +135,7 @@ function clearScene(){
 /////////////////////////////////////////////////////////////////////////
 //// INTRO CAMERA ANIMATION USING TWEEN
 function introAnimation() {
-    new TWEEN.Tween(camera.position.set(0,-2,4)).to({ x: 0, y: 10, z: 2}, 3000).easing(TWEEN.Easing.Cubic.Out).start()
+    new TWEEN.Tween(camera.position.set(0,-2,4)).to({ x: 0, y: 0, z: 2}, 3000).easing(TWEEN.Easing.Cubic.Out).start()
     .onComplete(function () {
         TWEEN.remove(this)
         document.querySelector('.header').classList.add('ended')
