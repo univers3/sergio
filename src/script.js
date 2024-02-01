@@ -105,7 +105,7 @@ const sunLight = new DirectionalLight(0x435c72, 0.08)
 sunLight.position.set(-100,0,-100)
 scene.add(sunLight)
 
-const fillLight = new PointLight(0x88b2d9, 5, 4, 3)
+const fillLight = new PointLight(0x88b2d9, 4, 4, 3)
 fillLight.position.set(30,3,1.8)
 scene.add(fillLight)
 
@@ -135,7 +135,7 @@ function clearScene(){
 /////////////////////////////////////////////////////////////////////////
 //// INTRO CAMERA ANIMATION USING TWEEN
 function introAnimation() {
-    new TWEEN.Tween(camera.position.set(0,-2,4)).to({ x: 0, y: 0, z: 2}, 3000).easing(TWEEN.Easing.Cubic.Out).start()
+    new TWEEN.Tween(camera.position.set(0,-2,4)).to({ x: 0, y: 10, z: 2}, 3000).easing(TWEEN.Easing.Cubic.Out).start()
     .onComplete(function () {
         TWEEN.remove(this)
         document.querySelector('.header').classList.add('ended')
